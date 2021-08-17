@@ -1,26 +1,10 @@
 import axios from 'axios';
-import data from '../data/data.js'
+import Auth from './Authorization.js';
 
 async function uploadFile() {
 
     try {
-        const response = await axios({
-            method: 'post',
-            url: 'https://content.dropboxapi.com/2/files/upload',
-            params: {
-                authorization : `Bearer ${data.accessToken}`,
-                arg : {
-                    "path": "/Homework/math/Matrices.txt",
-                    "mode": "add",
-                    "autorename": true,
-                    "mute": false,
-                    "strict_conflict": false
-                },
-            },
-            headers: {
-                "Content-type": "application/octet-stream"
-            }
-        });
+        const response = await axios(Auth.uploadOptions());
         return response.status;
     } catch (error) {
         return error;
