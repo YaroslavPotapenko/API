@@ -1,60 +1,73 @@
-import data from './data/data.js';
+import data from "./data/data.js";
 
 class Authorization {
-    constructor() {
+
+    constructor () {
+
         this.method = "post";
         this.params = {
-            authorization : `Bearer ${data.accessToken}`
+            "authorization": `Bearer ${data.accessToken}`
         };
+
     }
-    uploadOptions() {
+
+    uploadOptions () {
+
         return {
-            method: this.method,
-            url: 'https://content.dropboxapi.com/2/files/upload',
-            params: {
-                authorization : this.params.authorization,
-                arg : {
-                    "path": "/Homework/math/Matrices.txt",
-                    "mode": "add",
+            "headers": {
+                "Content-type": "application/octet-stream"
+            },
+            "method": this.method,
+            "params": {
+                "arg": {
                     "autorename": true,
+                    "mode": "add",
                     "mute": false,
+                    "path": "/Homework/math/Matrices.txt",
                     "strict_conflict": false
                 },
+                "authorization": this.params.authorization
             },
-            headers: {
-                "Content-type": "application/octet-stream"
-            }
-        }
+            "url": "https://content.dropboxapi.com/2/files/upload"
+        };
+
     }
-    getFileMetadataOptions() {
+
+    getFileMetadataOptions () {
+
         return {
-            method: this.method,
-            url: 'https://api.dropboxapi.com/2/files/get_metadata',
-            params: this.params,
-            headers: {
-                "Content-type": "application/json"
-            },
-            data: {
-                "path": "/Homework/math",
-                "include_media_info": false,
+            "data": {
                 "include_deleted": false,
-                "include_has_explicit_shared_members": false
-            } 
-        }
-    }
-    deleteFileOptions() {
-        return {
-            method: this.method,
-            url: 'https://api.dropboxapi.com/2/files/delete_v2',
-            params: this.params,
-            headers: {
+                "include_has_explicit_shared_members": false,
+                "include_media_info": false,
+                "path": "/Homework/math"
+            },
+            "headers": {
                 "Content-type": "application/json"
             },
-            data: {
-                "path": "/Homework/math/Matrices.txt"
-            } 
-        }
+            "method": this.method,
+            "params": this.params,
+            "url": "https://api.dropboxapi.com/2/files/get_metadata"
+        };
+
     }
+
+    deleteFileOptions () {
+
+        return {
+            "data": {
+                "path": "/Homework/math/Matrices.txt"
+            },
+            "headers": {
+                "Content-type": "application/json"
+            },
+            "method": this.method,
+            "params": this.params,
+            "url": "https://api.dropboxapi.com/2/files/delete_v2"
+        };
+
+    }
+
 }
 
 export default new Authorization();

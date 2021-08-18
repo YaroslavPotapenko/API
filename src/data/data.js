@@ -1,5 +1,5 @@
 const data = {
-    "accessToken" : "xxx"
-}
+    "accessToken": "xxx"
+};
 
 export default data;
