@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-19T13:00:46.100Z",
+    "end": "2021-08-19T13:00:48.854Z",
+    "duration": 2754,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5773bd0b-4f6f-4f13-a32b-2aab660f9d64",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34b1b1d2-386c-46f6-afc2-177280aad832",
+          "title": "uploadFile",
+          "fullFile": "F:\\EPAM\\API\\test\\index.spec.js",
+          "file": "\\test\\index.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "status code should be 200",
+              "fullTitle": "uploadFile status code should be 200",
+              "timedOut": false,
+              "duration": 881,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await uploadFile.uploadFile();\n                expect(res).toEqual(200);",
+              "err": {},
+              "uuid": "4e0367df-3c58-4f19-a326-bf56e19ca75d",
+              "parentUUID": "34b1b1d2-386c-46f6-afc2-177280aad832",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e0367df-3c58-4f19-a326-bf56e19ca75d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 881,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1d142cef-14ab-4ee0-81a4-4fdefd2fca08",
+          "title": "getFileMetadata",
+          "fullFile": "F:\\EPAM\\API\\test\\index.spec.js",
+          "file": "\\test\\index.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "status code should be 200",
+              "fullTitle": "getFileMetadata status code should be 200",
+              "timedOut": false,
+              "duration": 292,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await fileMetadata.getFileMetadata();\n                expect(res).toEqual(200);",
+              "err": {},
+              "uuid": "b5dbc59e-b031-41a4-a84d-fb88bef4ddfe",
+              "parentUUID": "1d142cef-14ab-4ee0-81a4-4fdefd2fca08",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b5dbc59e-b031-41a4-a84d-fb88bef4ddfe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 292,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "fcb15349-1609-4410-870e-1fc173a77790",
+          "title": "deleteFile",
+          "fullFile": "F:\\EPAM\\API\\test\\index.spec.js",
+          "file": "\\test\\index.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "status code should be 200",
+              "fullTitle": "deleteFile status code should be 200",
+              "timedOut": false,
+              "duration": 1568,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await deleteFile.deleteFile();\n                expect(res).toEqual(200);",
+              "err": {},
+              "uuid": "6d02ec83-9671-490e-8f72-4760460e72f8",
+              "parentUUID": "fcb15349-1609-4410-870e-1fc173a77790",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d02ec83-9671-490e-8f72-4760460e72f8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1568,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.0.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}

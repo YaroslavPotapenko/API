@@ -95,7 +95,7 @@ module.exports = {
 
         "func-names": "error",
 
-        "func-style": "error",
+        "func-style": "off",
 
         "function-call-argument-newline": "error",
 
